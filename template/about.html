@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>About Page</title>
+</head>
+<style>
+	 #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 75px;
+      padding: 16px;
+      bottom: 8px;
+    }
+	
+    .img_holder img{
+        max-width: 100%; max-height: 100%;
+    }
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>
+<body>
+
+	<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">Finance ML</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/term_deposit">Term Deposit</a>
+          <a class="nav-item nav-link" href="/customer_churn">Customer Churn</a>
+          <a class="nav-item nav-link" href="/home_loan">Home Loan</a>
+          <a class="nav-item nav-link" href="/personal_loan">Personal Loan</a>
+          <a class="nav-item nav-link" href="/loan_default">Loan Default</a>
+		  <a class="nav-item nav-link" href="/finance_sentiment">Finance Sentiment</a>
+
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register<
+      </div>-->
+    </div>
+  </nav>
+</header>
+
+	<div class="container">
+		<h1>Welcome to Finance ML</h1>
+
+    <h2>1. Term Deposit Signup Prediction </h2>
+    <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Term_Deposit.jpeg') }}"/>
+   </div> <p>
+    <p>A term deposit, often referred to as a fixed deposit or time deposit, is a financial product offered by banks and financial institutions. It involves depositing a specific amount of money for a predetermined period, typically ranging from a few months to several years, at an agreed-upon interest rate. During this period, the deposited funds cannot be withdrawn without incurring penalties. In return, the depositor earns a fixed and guaranteed interest income, making it a low-risk investment option. Term deposits are suitable for individuals seeking a secure way to save money and earn interest, but they lack the liquidity of regular savings accounts.<br></p>
+
+    <h3>Financial firms benefit from term deposits in several ways:</h3>
+
+    <ul>
+      <li>Stable Source of Funds: Term deposits provide banks with steady capital for lending and investment, ensuring financial stability</li>
+      <li>Liquidity Management: Banks align deposit maturities with their needs, maintaining enough liquidity for customer withdrawals and obligations </li>
+      <li>Interest Income: Banks earn profits by lending deposited funds at higher interest rates </li>
+      <li>Customer Retention and Cross-Selling: Attractive term deposit rates attract and retain customers, allowing banks to offer more services and products</li>
+    </ul>
+
+<br>
+<hr>
+<br>
+
+<h2>2. Customer Churn Predicton</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Customer_Churn.png') }}"/>
+   </div> <p>
+<p>Customer churn, often referred to as customer attrition or turnover, is a business metric that quantifies the rate at which customers discontinue their relationship with a company over a specified period. It signifies the loss of clientele and is typically expressed as a percentage. High churn rates can be detrimental to a business as they indicate dissatisfaction, unsuccessful customer retention strategies, or competitive pressures. Reducing churn is crucial for maintaining revenue and profitability. To address it, companies often analyze customer feedback, enhance products or services, and implement retention strategies to foster long-term customer loyalty and satisfaction.</p>
+
+<h3>Predicting customer churn benefits financial firms in multiple ways ways:</h3>
+
+ <ul>
+  <li>Retention Strategy: Identifying potential churners helps firms implement targeted retention efforts, preserving valuable customer relationships and revenue</li>
+  <li>Cost Efficiency: Focusing on retaining existing clients is more cost-effective than acquiring new ones, optimizing resource allocation</li>
+  <li>Data-Driven Insights: Churn prediction provides data-driven decision-making capabilities, aiding in marketing, product improvements, and customer satisfaction enhancements</li>
+  <li>Risk Mitigation: Identifying high-churn segments helps firms diversify their customer base, reducing exposure to potential revenue loss</li>
+  <li>Competitive Edge: Effective churn prediction strengthens customer relationships, enhancing the firm's competitive position in the market</li>
+</ul>
+<br> 
+<hr>
+<br>
+
+<h2>3. Home Loan Approval Prediction</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Home_Loan.jpeg') }}"/>
+   </div> <p>
+
+<p>A home loan, also known as a mortgage, is a financial arrangement where a lender, typically a bank or a financial institution, provides funds to an individual or entity to purchase a residential property. The borrower repays the loan over a predetermined period, often spanning several years or decades, with interest. The property itself serves as collateral, allowing the lender to seize it in case of default. Home loans enable individuals to realize homeownership by spreading the cost of a house over time, making it more affordable. These loans come in various types, including fixed-rate and adjustable-rate mortgages, catering to different borrower preferences and financial situations.</p>
+
+<h3>Financial firms benefit from offering home loans in multiple ways:</h3>
+ <ul>
+  <li>Interest Income: They earn interest on home loans, generating a consistent stream of revenue over the loan term</li>
+  <li>Loan Origination Fees: Firms charge fees for processing and approving home loan applications, adding to their income</li>
+  <li>Portfolio Diversification: Home loans diversify a firm's lending portfolio, spreading risk across various borrowers and property types</li>
+  <li>Customer Relationships: Providing home loans fosters long-term relationships with customers, potentially leading to cross-selling other financial products and services</li>
+  <li>Market Presence: Offering home loans enhances a financial firm's market presence and competitive position in the banking industry</li>
+</ul>
+<br> 
+<hr>
+<br>
+
+<h2>4. Personal Loan Signup Prediction </h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Personal_Loan.jpg') }}"/>
+   </div> <p>
+   
+<p>A personal loan is an unsecured financial product offered by banks, credit unions, or online lenders to individuals for various personal expenses. Unlike secured loans backed by collateral, personal loans are approved based on the borrower's creditworthiness and ability to repay. Borrowers receive a lump sum and repay it in fixed monthly installments over a specified term, typically ranging from one to five years. These loans can be used for a wide range of purposes, including debt consolidation, home improvements, medical expenses, or unexpected financial needs. Interest rates on personal loans vary based on the borrower's credit score and financial history.
+<br></p>
+
+<h3>Financial firms benefit from offering personal loans in these ways:</h3>
+
+ <ul>
+  <li>Interest Income: Personal loans generate interest income, contributing to a steady revenue stream</li>
+  <li>Loan Origination Fees: They charge fees for processing and disbursing personal loans, bolstering profits</li>
+  <li>Risk Management: Lending diversification spreads risk across various borrowers and purposes, reducing exposure to any single sector</li>
+  <li>Customer Engagement: Personal loans help build long-term customer relationships, opening opportunities for cross-selling other financial products and services</li>
+  <li>LMarket Presence: Offering personal loans enhances a firm's presence and competitiveness in the financial services sector</li>
+</ul>
+<br> 
+<hr>
+<br>
+<h2>5. Loan Default Prediction</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Loan_Deafult.jpg') }}"/>
+   </div> <p>
+
+<p>A loan default occurs when a borrower fails to meet the agreed-upon terms and conditions of a loan agreement, typically by missing scheduled payments. This failure can result from financial hardship, mismanagement, or other reasons. Loan defaults can have serious consequences, including penalties, increased interest rates, damage to the borrower's credit score, and the potential loss of collateral for secured loans. Lenders may initiate collection efforts, involving debt collection agencies or legal action, to recover the outstanding amount. Loan defaults are a significant concern for both borrowers and lenders, as they can lead to financial instability and long-term consequences for all parties involved.<br>
+</p>
+<ul>
+    <li>Risk Mitigation: Identifying potential defaults allows firms to take proactive measures, reducing financial losses and preserving capital</li>
+   <li> Lower Operational Costs: Predictions enable efficient allocation of resources for collections and recovery, minimizing costs associated with defaults</li>
+    <li>Enhanced Credit Underwriting: Better predictive models lead to improved lending decisions, reducing the likelihood of extending loans to high-risk borrowers</li>
+    <li>Improved Profitability: Lower default rates increase the firm's profitability by maintaining a healthier loan portfolio</li>
+    <li>Regulatory Compliance: Predicting defaults can help firms meet regulatory requirements by managing credit risk effectively</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+<h2>6. Financeial Sentiment Analysis</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='Finance_Sentiment.png') }}"/>
+   </div> <p>
+
+<p>Financial Sentiment Analysis is a data analysis technique that assesses public sentiment, emotions, and opinions expressed in financial news, social media, or other text sources regarding financial markets, assets, or economic trends. Using natural language processing and machine learning, it quantifies whether the sentiment is positive, negative, or neutral, and gauges potential market impacts. Financial professionals and investors use this analysis to make informed decisions, assess market sentiment, and predict market movements. It can uncover insights, detect emerging trends, and identify sentiment-driven market shifts, assisting in risk management and investment strategies in the ever-changing world of finance.</p>
+
+<ul>
+    <li>Market Insight: It provides valuable insights into market sentiment, helping firms make informed investment and trading decisions</li>
+    <li>Risk Management: Early detection of negative sentiment can prompt proactive risk mitigation strategies, reducing potential losses</li>
+    <li>Algorithmic Trading: Sentiment analysis informs algorithmic trading strategies, enhancing trade execution and returns</li>
+    <li>Customer Service: Monitoring sentiment can identify customer concerns, enabling firms to address issues and improve client satisfaction</li>
+    <li>Competitive Advantage: Leveraging sentiment analysis gives firms a competitive edge by staying ahead of market trends and sentiment-driven movements</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+<br>
+
+
+
+
+	</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<footer id="main-footer">
+      Copyright &copy; 2023
+    </footer>
+</body>
+</html>

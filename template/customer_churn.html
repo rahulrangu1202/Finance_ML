@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>Customer_churn_prediction</title>
+    
+</head>
+	<style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 125px;
+      padding: 16px;
+      bottom: 8px;
+    }</style>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">Finance ML</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/term_deposit">Term Deposit</a>
+          <a class="nav-item nav-link" href="/customer_churn">Customer Churn</a>
+          <a class="nav-item nav-link" href="/home_loan">Home Loan</a>
+          <a class="nav-item nav-link" href="/personal_loan">Personal Loan</a>
+          <a class="nav-item nav-link" href="/loan_default">Loan Default</a>
+		  <a class="nav-item nav-link" href="/finance_sentiment">Finance Sentiment</a>
+        </div>
+        <!-- Navbar Right Side
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container",class="form-group">
+        <h2>Welcome to Customer Churn Predictoin Model</h2>
+		<p>Try the model youself by giving the values and know whether the customer will leave the company or not<p>
+  <form action="/predict_customer_churn" method="POST">
+  
+    <label for="CreditScore">CreditScore(350-850): </label>
+    <input type="text" id="CreditScore" name="CreditScore">
+    <br>
+
+    <label for="Geography">Geography(France,Spain,Germany): </label>
+    <input type="text" id="Geography" name="Geography">
+    <br>
+
+    <label for="Gender">Gender(Male,Female): </label>
+    <input type="text" id="Gender" name="Gender">
+    <br>
+
+    <label for="Age">Age : </label>
+    <input type="text" id="Age" name="Age">
+    <br>
+
+    <label for="Tenure">Tenure(0-10): </label>
+    <input type="text" id="Tenure" name="Tenure">
+    <br>
+
+    <label for="Balance">Balance : </label>
+    <input type="text" id="Balance" name="Balance">
+    <br>
+
+    <label for="NumOfProducts">NumOfProducts(values:1,2,3,4) : </label>
+    <input type="text" id="NumOfProducts" name="NumOfProducts">
+    <br>
+
+    <label for="HasCrCard">HasCrCard(1:yes,0:no): </label>
+    <input type="text" id="HasCrCard" name="HasCrCard">
+    <br>
+    <br>
+	
+	<label for="IsActiveMember">IsActiveMember(1:yes,0:no): </label>
+    <input type="text" id="IsActiveMember" name="IsActiveMember">
+    <br>
+    <br>
+	
+	<label for="EstimatedSalary">EstimatedSalary : </label>
+    <input type="text" id="EstimatedSalary" name="EstimatedSalary">
+    <br>
+    <br>
+
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>term_deposit_pred</title>
+</head>
+	<style>
+	#main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 75px;
+      padding: 16px;
+      bottom: 8px;
+		}</style>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">Finance ML</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/term_deposit">Term Deposit</a>
+          <a class="nav-item nav-link" href="/customer_churn">Customer Churn</a>
+          <a class="nav-item nav-link" href="/home_loan">Home Loan</a>
+          <a class="nav-item nav-link" href="/personal_loan">Personal Loan</a>
+          <a class="nav-item nav-link" href="/loan_default">Loan Default</a>
+		  <a class="nav-item nav-link" href="/finance_sentiment">Finance Sentiment</a>
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="container">
+        <h2>Welcome to Term Deposit Signup Predictoin Model</h2>
+		<p>Try the model youself by giving the values and know whether the customer is inrested in term deposit or not<p>
+
+    <form action="/predict_term_deposit" method="POST">
+
+    <label for="age">age : </label>
+    <input type="text" id="age" name="age">
+    <br>
+
+    <label for="job">job : </label>
+    <input type="text" id="job" name="job">
+    <br>
+
+    <label for="marital">marital(married,single,divorced) : </label>
+    <input type="text" id="marital" name="marital">
+    <br>
+
+    <label for="education">education(high.school,university.degree,professional.course,illiterate) : </label>
+    <input type="text" id="education" name="education">
+    <br>
+
+    <label for="default">default(has credit in default? : no,unknown) : </label>
+    <input type="text" id="default" name="default">
+    <br>
+
+    <label for="housing">housing(has housing loan? : yes,no,unknown): </label>
+    <input type="text" id="housing" name="housing">
+    <br>
+
+    <label for="loan">loan(has personal loan? : yes,no,unknown): </label>
+    <input type="text" id="loan" name="loan">
+    <br>
+
+    <label for="contact">contact(communication type : cellular,telephone)): </label>
+    <input type="text" id="contact" name="contact">
+    <br>
+
+    <label for="month">month(ex:jun,oct,dec): </label>
+    <input type="text" id="month" name="month">
+    <br>
+
+    <label for="day_of_week">day_of_week(ex:mon,wed,fri): </label>
+    <input type="text" id="day_of_week" name="day_of_week">
+    <br>
+
+    <label for="duration">duration(last contact duration, in seconds): </label>
+    <input type="text" id="duration" name="duration">
+    <br>
+
+    <label for="campaign">campaign(number of contacts performed during this campaign and for this client): </label>
+    <input type="text" id="campaign" name="campaign">
+    <br>
+
+    <label for="pdays">pdays(number of days that passed by after the client was last contacted from a previous campaign): </label>
+    <input type="text" id="pdays" name="pdays">
+    <br>
+
+    <label for="previous">previous(number of contacts performed before this campaign and for this client): </label>
+    <input type="text" id="previous" name="previous">
+    <br>
+
+    <label for="poutcome">poutcome(outcome of the previous marketing campaign : nonexistent,success,failure): </label>
+    <input type="text" id="poutcome" name="poutcome">
+    <br>
+
+    <label for="emp_var_rate">emp_var_rate(employment variation rate - quarterly indicator): </label>
+    <input type="text" id="emp_var_rate" name="emp_var_rate">
+    <br>
+
+    <label for="cons_price_idx">cons_price_idx(consumer price index - monthly indicator): </label>
+    <input type="text" id="cons_price_idx" name="cons_price_idx">
+    <br>
+
+    <label for="cons_conf_idx">cons_conf_idx(consumer confidence index - monthly indicator): </label>
+    <input type="text" id="cons_conf_idx" name="cons_conf_idx">
+    <br>
+
+    <label for="euribor3m">euribor3m(euribor 3 month rate - daily indicator): </label>
+    <input type="text" id="euribor3m" name="euribor3m">
+    <br>
+
+    <label for="nr_employed">nr_employed(number of employees - quarterly indicator): </label>
+    <input type="text" id="nr_employed" name="nr_employed">
+    <br>
+
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+</body>
+</html>

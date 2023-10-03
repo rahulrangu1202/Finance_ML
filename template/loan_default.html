@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>loan_default_pred</title>
+    
+</head>
+	<style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 1px;
+      padding: 16px;
+      bottom: 8px;
+    }</style>
+	
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">Finance ML</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/term_deposit">Term Deposit</a>
+          <a class="nav-item nav-link" href="/customer_churn">Customer Churn</a>
+          <a class="nav-item nav-link" href="/home_loan">Home Loan</a>
+          <a class="nav-item nav-link" href="/personal_loan">Personal Loan</a>
+          <a class="nav-item nav-link" href="/loan_default">Loan Default</a>
+		  <a class="nav-item nav-link" href="/finance_sentiment">Finance Sentiment</a>
+
+        </div>
+        <!-- Navbar Right Side
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container",class="form-group">
+        <h2>Welcome to Loan Default Predictoin Model</h2>
+		<p>Try the model youself by giving the values and know whether the customer will default the loan or not<p>
+  <form action="/predict_loan_default" method="POST">
+  
+    <label for="Income">Income(Annual Rs) : </label>
+    <input type="text" id="Income" name="Income">
+    <br>
+
+    <label for="Age">Age : </label>
+    <input type="text" id="Age" name="Age">
+    <br>
+	
+	<label for="Experience">Experience : </label>
+    <input type="text" id="Experience" name="Experience">
+    <br>
+
+    <label for="Married_or_Single">Married_or_Single(values:married,single) : </label>
+    <input type="text" id="Married_or_Single" name="Married_or_Single">
+    <br>
+	
+	<label for="House_Ownership">House_Ownership(rented,owned,norent_noown) : </label>
+    <input type="text" id="House_Ownership" name="House_Ownership">
+    <br>
+	
+	<label for="Car_Ownership">Car_Ownership(yes,no) : </label>
+    <input type="text" id="Car_Ownership" name="Car_Ownership">
+    <br>
+	
+	<label for="Profession">Profession : </label>
+    <input type="text" id="Profession" name="Profession">
+    <br>
+
+    <label for="CITY">CITY : </label>
+    <input type="text" id="CITY" name="CITY">
+    <br>
+	
+	<label for="STATE">STATE : </label>
+    <input type="text" id="STATE" name="STATE">
+    <br>
+
+    <label for="CURRENT_JOB_YRS">CURRENT_JOB_YRS: </label>
+    <input type="text" id="CURRENT_JOB_YRS" name="CURRENT_JOB_YRS">
+    <br>
+
+    <label for="CURRENT_HOUSE_YRS">CURRENT_HOUSE_YRS : </label>
+    <input type="text" id="CURRENT_HOUSE_YRS" name="CURRENT_HOUSE_YRS">
+    <br>
+
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
