@@ -25,12 +25,16 @@
 13. Categorical Feature Encoding
 14.	Feature scaling
 15.	Imbalanced dataset
+16.	Dimentionality Reduction
 
 ### 4.Model building
 
+17. Cross Validation
+18. Hyperparameter Tuning
+
 ### 5.Feature Selection
-16.	Feature Importance
-17.	Feature Selection
+19.	Feature Importance
+20.	Feature Selection
 
 ### 6.Model Evaluation
 
