@@ -14,10 +14,10 @@
 
 6.	Univariate Analysis
 7.	Bi-variate Analysis
-8.	Explore Numerical features
-9.	Explore Categorical features
+8.	Explore Numerical featuresa and visualize them
+9.	Explore Categorical features and visualize them
 
-### 3.Feature Engineering
+### 3.Feature Engineering - build Pipelines
 
 10.	Handing Missing values
 11.	Handling Outliers
